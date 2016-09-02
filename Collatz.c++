@@ -25,13 +25,35 @@ bool collatz_read (istream& r, int& i, int& j) {
     r >> j;
     return true;}
 
+//-------------
+//cycle_length
+//-------------
+int cycle_length (int n) {
+
+    int c = 1;
+    while (n > 1) {
+        if ((n % 2) == 0)
+            n = (n / 2);
+        else
+            n = (3 * n) + 1;
+        ++c;}
+
+    return c;}
+
 // ------------
 // collatz_eval
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    return 1;}
+    
+    int max_cycle = 0;
+
+    for (i; i<=j; ++i){
+        if(max_cycle < cycle_length(i))
+            max_cycle = cycle_length(i);
+    }
+
+    return max_cycle;}
 
 // -------------
 // collatz_print

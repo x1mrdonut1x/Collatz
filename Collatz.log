@@ -1,0 +1,47 @@
+commit 005eb837fe310f46ef4c17333fc4728eb41f6b10
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 17:57:38 2016 -0500
+
+    updated makefile
+
+commit c9f8f040f8ab9217f83050410744dc074574ca2a
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 17:56:55 2016 -0500
+
+    deleted tests
+
+commit e95f633e84e3892eff4230d8dbd4ec245f4f154c
+Author: x1mrdonut1x <alex@niznik.info>
+Date:   Thu Sep 1 13:49:27 2016 +0000
+
+    test
+
+commit b90c54fa40d605204cd5cb311c7afba6289291e6
+Author: Alex Niznik <alex@niznik.info>
+Date:   Thu Sep 1 08:35:25 2016 -0500
+
+    changed travis.yml
+
+commit 862f0b360aaa4859f6cd5960bcc3a473fd4c1f3e
+Author: Alex Niznik <alex@niznik.info>
+Date:   Thu Sep 1 08:26:20 2016 -0500
+
+    added all the files
+
+commit 71b09a0919d346f3c79e162e20551de270ca2579
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Aug 31 13:56:28 2016 -0500
+
+    added .travis.yml
+
+commit 981e851f6bb076c6f7f34c9f56c086dd35b5cf09
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Aug 31 07:46:25 2016 -0500
+
+    dev branch test
+
+commit 3bdd24f12c7e9f0b710ba3e4dcec9362c311f8a1
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Aug 31 07:42:18 2016 -0500
+
+    first commit
