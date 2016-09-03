@@ -52,7 +52,7 @@ int collatz_eval (int i, int j) {
         if(max_cycle < cycle_length(i))
             max_cycle = cycle_length(i);
     }
-
+    cout << max_cycle << endl;s
     return max_cycle;}
 
 // -------------
