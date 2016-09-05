@@ -90,7 +90,6 @@ endif
 
 RunCollatz.tmp: RunCollatz
 	./RunCollatz < RunCollatz.in > RunCollatz.tmp
-	diff RunCollatz.tmp RunCollatz.out
 
 TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Collatz.c++ TestCollatz.c++ -o TestCollatz $(LDFLAGS)
