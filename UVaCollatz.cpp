@@ -13,50 +13,24 @@ bool collatz_read (istream& r, int& i, int& j) {
     r >> j;
     return true;}
 
-
-
 // ------------
 // search_array
 // ------------
 
 int search_array(int t[][2], int k, int z){
 
-int i = z;
+int i = 0;
 
-while(t[i][0] != k && i >0){
+while(t[i][0] != k && i > 0){
     --i;
 }
 
-if (t[i][0] != k)
+if (t[i][0] != k){
     return 0;
+}
 
 return t[i][1];}
 
-//-------------
-//cycle_length
-//-------------
-int cycle_length (int n) {
-
-    int cache[10000][2], z = 0;
-    int c = 1;
-
-    while (n > 1) {
-        int p = search_array(cache, n, 1);
-        if ((n % 2) == 0){
-            n = (n / 2);
-            if (p != 0)
-                return p;
-        }else{
-            n = (3 * n) + 1;
-        }
-        ++c;}
-
-    cache[z][0] = n;
-    cache[z][1] = c;
-    ++z;
-
-
-    return c;}
 // ------------
 // collatz_eval
 // ------------
@@ -69,41 +43,53 @@ int collatz_eval (int i, int j) {
         j = temp;
     }
 
-    int cache[10000][2], z = 0;
+    int cache[10000][2], z = 4;
     int max_cycle = 0;
-
-    for (i; i<=j && i >= 0; ++i){
+              
+            cache[0][0] = 2;
+            cache[0][1] = 2;
+            cache[1][0] = 4;
+            cache[1][1] = 3;
+            cache[2][0] = 8;
+            cache[2][1] = 4;
+            cache[3][0] = 16;
+            cache[3][1] = 5;
+            cache[4][0] = 3;
+            cache[4][1] = 8;
+            cache[5][0] = 7;
+            cache[5][1] = 17;
+            
+    for (int x = i; x <= j && x >= 0; ++x){
 
         //////////////////////////
+
         int c = 1;
-        int n = i;
+        int n = x;
         int p = 0;
+
         while (n > 1) {
             p = search_array(cache, n, z);
+            if (p != 0){
+                c += p - 1;
+                break;
+            }
             if ((n % 2) == 0){
                 n = (n / 2);
             }else{
                 n = (3 * n) + 1;
             }
-            if (p != 0){
-                //cout << n << " -- " << p << endl;
-                c += p - 1;
-                break;
-            }
 
             ++c;}
-        //cout << " -- " << c << endl;
-        if (p == 0){
-            cache[z][0] = i;
+
+            cache[z][0] = x;
             cache[z][1] = c;
-            ++z;}
+            ++z;
 
         //////////////////////////
 
         if(max_cycle < c)
             max_cycle = c;
     }
-
     return max_cycle;}
 
 // -------------
