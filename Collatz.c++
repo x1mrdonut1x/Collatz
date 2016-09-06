@@ -10,11 +10,11 @@
 
 #include <cassert>  // assert
 #include <iostream> // endl, istream, ostream
+#include <map> //hashmap
 
 #include "Collatz.h"
 
 using namespace std;
-
 // ------------
 // collatz_read
 // ------------
@@ -37,10 +37,8 @@ int collatz_eval (int i, int j) {
         j = temp;
     }
 
-    int cache[100000][2] = {0};
-    int z = 0;
     int max_cycle = 0;
-
+    map <int, int> test;
 
 
     for (int x = i; x <= j && x >= 0; ++x){
@@ -49,25 +47,22 @@ int collatz_eval (int i, int j) {
 
         int c = 1;
         int n = x;
-
+        
         while (n > 1) {
-            if (n < j && n == cache[n][0]){
-                c += cache[n][1] - 1;
-                cout << n << "->" << c << endl;
-                break;
-                }
+
+
+            if (test.count(n) != 0){
+                c += test[n] - 1;
+                test[x] = c;
+                break;}
 
             if ((n % 2) == 0)
                 n = (n / 2);
             else
                 n = (3 * n) + 1;
-            
             ++c;}
 
-            cache[z][0] = x;
-            cache[z][1] = c;
-            ++z;
-            cout << "z: " << z << endl;
+
         //////////////////////////
 
         if(max_cycle < c)
