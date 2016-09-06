@@ -26,7 +26,7 @@ ifeq ($(shell uname), Darwin)                                        # Apple
     CLANG-CHECK  := clang-check
     GCOV         := gcov
     GCOVFLAGS    := -fprofile-arcs -ftest-coverage
-    VALGRIND     := valgrind
+    VALGRIND     := valgrind --track-origins=yes
     DOXYGEN      := doxygen
     CLANG-FORMAT := clang-format
 else ifeq ($(CI), true)                                              # Travis CI
@@ -38,7 +38,7 @@ else ifeq ($(CI), true)                                              # Travis CI
     CLANG-CHECK  := clang-check
     GCOV         := gcov-5
     GCOVFLAGS    := -fprofile-arcs -ftest-coverage
-    VALGRIND     := valgrind
+    VALGRIND     := valgrind --track-origins=yes
     DOXYGEN      := doxygen
     CLANG-FORMAT := clang-format
 else ifeq ($(shell uname -p), unknown)                               # Docker
@@ -50,7 +50,7 @@ else ifeq ($(shell uname -p), unknown)                               # Docker
     CLANG-CHECK  := clang-check
     GCOV         := gcov
     GCOVFLAGS    := -fprofile-arcs -ftest-coverage
-    VALGRIND     := valgrind
+    VALGRIND     := valgrind --track-origins=yes
     DOXYGEN      := doxygen
     CLANG-FORMAT := clang-format
 else                                                                 # UTCS
@@ -62,7 +62,7 @@ else                                                                 # UTCS
     CLANG-CHECK  := clang-check-3.8
     GCOV         := gcov-4.8
     GCOVFLAGS    := -fprofile-arcs -ftest-coverage
-    VALGRIND     := valgrind
+    VALGRIND     := valgrind --track-origins=yes
     DOXYGEN      := doxygen
     CLANG-FORMAT := clang-format-3.8
 endif
