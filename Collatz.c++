@@ -39,7 +39,6 @@ int collatz_eval (int i, int j) {
     }
 
     int max_cycle = 0;
-    map <int, int> test;
     int cache[N] = {0};
 
     for (int x = i; x <= j && x >= 0; ++x){
@@ -48,16 +47,8 @@ int collatz_eval (int i, int j) {
 
         int c = 1;
         int n = x;
-        map<int,int>::iterator z;
-        while (n > 1) {
 
-            /*
-            z = test.find(n);
-            if (z != test.end()){
-                c += test[n] - 1;
-                test[x] = c;
-                break;}
-            */
+        while (n > 1) {
 
             if (n < j && n < N){
                 if (cache[n] != 0){
@@ -78,10 +69,7 @@ int collatz_eval (int i, int j) {
                     cache[x] = c;
                     
             }
-            /*
-            if (z == test.end())
-                test[x] = c;
-            */
+
         //////////////////////////
 
         if(max_cycle < c)
