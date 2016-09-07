@@ -4,3 +4,5 @@
 *.gcno
 *.gcov
 *.db
+.vscode/
+.vscode

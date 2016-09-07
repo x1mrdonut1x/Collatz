@@ -1,0 +1,6 @@
+.exe
+.o
+.gcda
+.gcno
+.gcov
+.db
