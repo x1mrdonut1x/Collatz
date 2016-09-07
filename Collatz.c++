@@ -10,11 +10,12 @@
 
 #include <cassert>  // assert
 #include <iostream> // endl, istream, ostream
+#include <map> //hashmap
 
 #include "Collatz.h"
 
 using namespace std;
-
+const int N = 100000;
 // ------------
 // collatz_read
 // ------------
@@ -25,32 +26,54 @@ bool collatz_read (istream& r, int& i, int& j) {
     r >> j;
     return true;}
 
-//-------------
-//cycle_length
-//-------------
-int cycle_length (int n) {
-
-    int c = 1;
-    while (n > 1) {
-        if ((n % 2) == 0)
-            n = (n / 2);
-        else
-            n = (3 * n) + 1;
-        ++c;}
-
-    return c;}
-
 // ------------
 // collatz_eval
 // ------------
 
 int collatz_eval (int i, int j) {
-    
-    int max_cycle = 0;
 
-    for (i; i<=j; ++i){
-        if(max_cycle < cycle_length(i))
-            max_cycle = cycle_length(i);
+    if (j < i){
+        int temp = i;
+        i = j;
+        j = temp;
+    }
+
+    int max_cycle = 0;
+    int cache[N] = {0};
+
+    for (int x = i; x <= j && x >= 0; ++x){
+
+        //////////////////////////
+
+        int c = 1;
+        int n = x;
+
+        while (n > 1) {
+
+            if (n < j && n < N){
+                if (cache[n] != 0){
+                    c += cache[n] - 1;
+                    cache[x] = c;
+                    break;
+                }
+            }
+
+            if ((n % 2) == 0)
+                n = (n / 2);
+            else
+                n = (3 * n) + 1;
+            ++c;}
+
+            if (x < N){
+                if (cache[x] == 0)
+                    cache[x] = c;
+                    
+            }
+
+        //////////////////////////
+
+        if(max_cycle < c)
+            max_cycle = c;
     }
 
     return max_cycle;}

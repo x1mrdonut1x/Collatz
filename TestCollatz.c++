@@ -39,20 +39,32 @@ TEST(CollatzFixture, read) {
 // ----
 
 TEST(CollatzFixture, eval_1) {
-    const int v = collatz_eval(1, 10);
+    const int v = collatz_eval(0, 10);
     ASSERT_EQ(20, v);}
 
 TEST(CollatzFixture, eval_2) {
+    const int v = collatz_eval(10, 10);
+    ASSERT_EQ(7, v);}
+
+TEST(CollatzFixture, eval_4) {
+    const int v = collatz_eval(1, 10);
+    ASSERT_EQ(20, v);}
+
+TEST(CollatzFixture, eval_5) {
     const int v = collatz_eval(100, 200);
     ASSERT_EQ(125, v);}
 
-TEST(CollatzFixture, eval_3) {
+TEST(CollatzFixture, eval_6) {
     const int v = collatz_eval(201, 210);
     ASSERT_EQ(89, v);}
 
-TEST(CollatzFixture, eval_4) {
+TEST(CollatzFixture, eval_7) {
     const int v = collatz_eval(900, 1000);
     ASSERT_EQ(174, v);}
+
+TEST(CollatzFixture, eval_8) {
+    const int v = collatz_eval(10000000, 10000000);
+    ASSERT_EQ(146, v);}
 
 // -----
 // print
