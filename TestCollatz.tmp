@@ -1,8 +1,8 @@
-==2541== Memcheck, a memory error detector
-==2541== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
-==2541== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
-==2541== Command: ./TestCollatz
-==2541== 
+==534== Memcheck, a memory error detector
+==534== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==534== Using Valgrind-3.10.0 and LibVEX; rerun with -h for copyright info
+==534== Command: ./TestCollatz
+==534== 
 Running main() from gtest_main.cc
 [==========] Running 10 tests from 1 test case.
 [----------] Global test environment set-up.
@@ -10,46 +10,342 @@ Running main() from gtest_main.cc
 [ RUN      ] CollatzFixture.read
 [       OK ] CollatzFixture.read (34 ms)
 [ RUN      ] CollatzFixture.eval_1
-[       OK ] CollatzFixture.eval_1 (14 ms)
+2->2
+2->2
+4->3
+3->8
+5->6
+4->3
+7->17
+5->6
+[       OK ] CollatzFixture.eval_1 (18 ms)
 [ RUN      ] CollatzFixture.eval_2
-[       OK ] CollatzFixture.eval_2 (2 ms)
+[       OK ] CollatzFixture.eval_2 (4 ms)
 [ RUN      ] CollatzFixture.eval_4
-[       OK ] CollatzFixture.eval_4 (3 ms)
+2->2
+2->2
+4->3
+3->8
+5->6
+4->3
+7->17
+5->6
+[       OK ] CollatzFixture.eval_4 (5 ms)
 [ RUN      ] CollatzFixture.eval_5
-[       OK ] CollatzFixture.eval_5 (27 ms)
+101->26
+103->88
+107->101
+107->101
+107->101
+106->13
+112->21
+112->21
+101->26
+101->26
+106->13
+103->88
+106->13
+118->34
+107->101
+107->101
+103->88
+116->21
+110->114
+112->21
+112->21
+100->26
+100->26
+101->26
+130->29
+103->88
+104->13
+118->34
+106->13
+106->13
+107->101
+137->91
+109->114
+110->114
+125->109
+112->21
+112->21
+113->13
+128->8
+115->34
+116->21
+122->21
+118->34
+118->34
+119->34
+122->21
+121->96
+122->21
+106->13
+124->109
+124->109
+125->109
+122->21
+127->47
+128->8
+145->117
+130->29
+130->29
+131->29
+167->68
+133->29
+134->29
+101->26
+136->16
+136->16
+137->91
+155->86
+106->13
+139->42
+140->16
+119->34
+142->104
+142->104
+143->104
+154->24
+145->117
+146->117
+110->114
+148->24
+148->24
+149->24
+190->107
+100->26
+[       OK ] CollatzFixture.eval_5 (13 ms)
 [ RUN      ] CollatzFixture.eval_6
-[       OK ] CollatzFixture.eval_6 (5 ms)
+202->27
+202->27
+[       OK ] CollatzFixture.eval_6 (6 ms)
 [ RUN      ] CollatzFixture.eval_7
-[       OK ] CollatzFixture.eval_7 (33 ms)
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+904->16
+904->16
+908->16
+911->42
+911->42
+911->42
+958->55
+916->37
+917->37
+917->37
+919->130
+958->55
+922->37
+958->55
+958->55
+958->55
+958->55
+958->55
+958->55
+931->37
+931->37
+935->130
+935->130
+938->24
+956->55
+956->55
+958->55
+962->50
+952->37
+952->37
+952->37
+958->55
+[       OK ] CollatzFixture.eval_7 (10 ms)
 [ RUN      ] CollatzFixture.eval_8
 [       OK ] CollatzFixture.eval_8 (4 ms)
 [ RUN      ] CollatzFixture.print
-[       OK ] CollatzFixture.print (12 ms)
+[       OK ] CollatzFixture.print (9 ms)
 [ RUN      ] CollatzFixture.solve
-[       OK ] CollatzFixture.solve (66 ms)
-[----------] 10 tests from CollatzFixture (223 ms total)
+2->2
+2->2
+4->3
+3->8
+5->6
+4->3
+7->17
+5->6
+101->26
+103->88
+107->101
+107->101
+107->101
+106->13
+112->21
+112->21
+101->26
+101->26
+106->13
+103->88
+106->13
+118->34
+107->101
+107->101
+103->88
+116->21
+110->114
+112->21
+112->21
+100->26
+100->26
+101->26
+130->29
+103->88
+104->13
+118->34
+106->13
+106->13
+107->101
+137->91
+109->114
+110->114
+125->109
+112->21
+112->21
+113->13
+128->8
+115->34
+116->21
+122->21
+118->34
+118->34
+119->34
+122->21
+121->96
+122->21
+106->13
+124->109
+124->109
+125->109
+122->21
+127->47
+128->8
+145->117
+130->29
+130->29
+131->29
+167->68
+133->29
+134->29
+101->26
+136->16
+136->16
+137->91
+155->86
+106->13
+139->42
+140->16
+119->34
+142->104
+142->104
+143->104
+154->24
+145->117
+146->117
+110->114
+148->24
+148->24
+149->24
+190->107
+100->26
+202->27
+202->27
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+911->42
+904->16
+904->16
+908->16
+911->42
+911->42
+911->42
+958->55
+916->37
+917->37
+917->37
+919->130
+958->55
+922->37
+958->55
+958->55
+958->55
+958->55
+958->55
+958->55
+931->37
+931->37
+935->130
+935->130
+938->24
+956->55
+956->55
+958->55
+962->50
+952->37
+952->37
+952->37
+958->55
+[       OK ] CollatzFixture.solve (34 ms)
+[----------] 10 tests from CollatzFixture (166 ms total)
 
 [----------] Global test environment tear-down
-[==========] 10 tests from 1 test case ran. (310 ms total)
+[==========] 10 tests from 1 test case ran. (257 ms total)
 [  PASSED  ] 10 tests.
-==2541== 
-==2541== HEAP SUMMARY:
-==2541==     in use at exit: 72,704 bytes in 1 blocks
-==2541==   total heap usage: 237 allocs, 236 frees, 129,648 bytes allocated
-==2541== 
-==2541== LEAK SUMMARY:
-==2541==    definitely lost: 0 bytes in 0 blocks
-==2541==    indirectly lost: 0 bytes in 0 blocks
-==2541==      possibly lost: 0 bytes in 0 blocks
-==2541==    still reachable: 72,704 bytes in 1 blocks
-==2541==         suppressed: 0 bytes in 0 blocks
-==2541== Rerun with --leak-check=full to see details of leaked memory
-==2541== 
-==2541== For counts of detected and suppressed errors, rerun with: -v
-==2541== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==534== 
+==534== HEAP SUMMARY:
+==534==     in use at exit: 72,704 bytes in 1 blocks
+==534==   total heap usage: 237 allocs, 236 frees, 129,648 bytes allocated
+==534== 
+==534== LEAK SUMMARY:
+==534==    definitely lost: 0 bytes in 0 blocks
+==534==    indirectly lost: 0 bytes in 0 blocks
+==534==      possibly lost: 0 bytes in 0 blocks
+==534==    still reachable: 72,704 bytes in 1 blocks
+==534==         suppressed: 0 bytes in 0 blocks
+==534== Rerun with --leak-check=full to see details of leaked memory
+==534== 
+==534== For counts of detected and suppressed errors, rerun with: -v
+==534== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 File 'Collatz.c++'
-Lines executed:81.82% of 33
-Branches executed:88.24% of 34
-Taken at least once:61.76% of 34
-Calls executed:84.21% of 19
+Lines executed:92.50% of 40
+Branches executed:100.00% of 44
+Taken at least once:75.00% of 44
+Calls executed:95.24% of 21
 Creating 'Collatz.c++.gcov'

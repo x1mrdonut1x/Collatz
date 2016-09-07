@@ -15,6 +15,7 @@
 #include "Collatz.h"
 
 using namespace std;
+const int N = 100000;
 // ------------
 // collatz_read
 // ------------
@@ -39,7 +40,7 @@ int collatz_eval (int i, int j) {
 
     int max_cycle = 0;
     map <int, int> test;
-
+    int cache[N] = {0};
 
     for (int x = i; x <= j && x >= 0; ++x){
 
@@ -47,14 +48,24 @@ int collatz_eval (int i, int j) {
 
         int c = 1;
         int n = x;
-        
+        map<int,int>::iterator z;
         while (n > 1) {
 
-
-            if (test.count(n) != 0){
+            /*
+            z = test.find(n);
+            if (z != test.end()){
                 c += test[n] - 1;
                 test[x] = c;
                 break;}
+            */
+
+            if (n < j && n < N){
+                if (cache[n] != 0){
+                    c += cache[n] - 1;
+                    cache[x] = c;
+                    break;
+                }
+            }
 
             if ((n % 2) == 0)
                 n = (n / 2);
@@ -62,7 +73,15 @@ int collatz_eval (int i, int j) {
                 n = (3 * n) + 1;
             ++c;}
 
-
+            if (x < N){
+                if (cache[x] == 0)
+                    cache[x] = c;
+                    
+            }
+            /*
+            if (z == test.end())
+                test[x] = c;
+            */
         //////////////////////////
 
         if(max_cycle < c)
