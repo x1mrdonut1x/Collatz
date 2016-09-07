@@ -66,6 +66,32 @@ TEST(CollatzFixture, eval_8) {
     const int v = collatz_eval(10000000, 10000000);
     ASSERT_EQ(146, v);}
 
+TEST(CollatzFixture, eval_9) {
+    const int v = collatz_eval(501, 101);
+    ASSERT_EQ(144, v);}
+
+TEST(CollatzFixture, eval_10) {
+    const int v = collatz_eval(1, 9999);
+    ASSERT_EQ(262, v);}
+
+
+TEST(CollatzFixture, eval_11) {
+    const int v = collatz_eval(319662, 322868);
+    ASSERT_EQ(371, v);}
+
+
+TEST(CollatzFixture, eval_12) {
+    const int v = collatz_eval(3000, 340);
+    ASSERT_EQ(217, v);}
+
+
+TEST(CollatzFixture, eval_13) {
+    const int v = collatz_eval(9999, 9998);
+    ASSERT_EQ(92, v);}
+
+
+
+
 // -----
 // print
 // -----

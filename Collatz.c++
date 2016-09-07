@@ -38,12 +38,15 @@ int collatz_eval (int i, int j) {
         j = temp;
     }
 
+    int m = (j / 2) + 1;
+
+    if (m > i)
+        i = m;
+
     int max_cycle = 0;
     int cache[N] = {0};
 
     for (int x = i; x <= j && x >= 0; ++x){
-
-        //////////////////////////
 
         int c = 1;
         int n = x;
@@ -69,8 +72,6 @@ int collatz_eval (int i, int j) {
                     cache[x] = c;
                     
             }
-
-        //////////////////////////
 
         if(max_cycle < c)
             max_cycle = c;
