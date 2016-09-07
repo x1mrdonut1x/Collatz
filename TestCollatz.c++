@@ -25,7 +25,7 @@ using namespace std;
 // read
 // ----
 
-TEST(CollatzFixture, read) {
+TEST(CollatzFixture, read1) {
     istringstream r("1 10\n");
     int           i;
     int           j;
@@ -33,6 +33,15 @@ TEST(CollatzFixture, read) {
     ASSERT_TRUE(b);
     ASSERT_EQ( 1, i);
     ASSERT_EQ(10, j);}
+
+TEST(CollatzFixture, read2) {
+    istringstream r("10 1000\n");
+    int           i;
+    int           j;
+    const bool b = collatz_read(r, i, j);
+    ASSERT_TRUE(b);
+    ASSERT_EQ( 10, i);
+    ASSERT_EQ(1000, j);}
 
 // ----
 // eval
@@ -96,17 +105,35 @@ TEST(CollatzFixture, eval_13) {
 // print
 // -----
 
-TEST(CollatzFixture, print) {
+TEST(CollatzFixture, print1) {
+    ostringstream w;
+    collatz_print(w, 0, 100, 101);
+    ASSERT_EQ("0 100 101\n", w.str());}
+
+TEST(CollatzFixture, print2) {
     ostringstream w;
     collatz_print(w, 1, 10, 20);
     ASSERT_EQ("1 10 20\n", w.str());}
+
+TEST(CollatzFixture, print3) {
+    ostringstream w;
+    collatz_print(w, 0, 0, 0);
+    ASSERT_EQ("0 0 0\n", w.str());}
 
 // -----
 // solve
 // -----
 
-TEST(CollatzFixture, solve) {
+TEST(CollatzFixture, solve1) {
     istringstream r("1 10\n100 200\n201 210\n900 1000\n");
     ostringstream w;
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());}
+
+    TEST(CollatzFixture, solve2) {
+    istringstream r("500 101\n3000 340\n1 9999\n20 20\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("500 101 144\n3000 340 217\n1 9999 262\n20 20 8\n", w.str());}
+
+
