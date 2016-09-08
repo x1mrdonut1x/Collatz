@@ -10,7 +10,6 @@
 
 #include <cassert>  // assert
 #include <iostream> // endl, istream, ostream
-#include <map> //hashmap
 
 #include "Collatz.h"
 

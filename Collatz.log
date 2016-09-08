@@ -1,3 +1,161 @@
+commit 5bc6f083045563b3cbbee66550bcbc70ba4639f8
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 18:51:50 2016 -0500
+
+    added more unit testing
+
+commit 3b27e0ac4a515497c2a4570a29a25780d2f9cac8
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 18:45:59 2016 -0500
+
+    deleted VSC files
+
+commit d0d1282be8604524daca0223c0109e1f7dcf568e
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 18:36:54 2016 -0500
+
+    Added test files
+
+commit 258ca3f54385268e05682e4ebb8e2199f004f3d7
+Merge: 95e6b9b cdb36d9
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 18:19:56 2016 -0500
+
+    Merge branch 'master' of https://github.com/x1mrdonut1x/cs371p-collatz
+
+commit 95e6b9b6fc46afce20ebffc7c5339aec2e921004
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 18:18:10 2016 -0500
+
+    added optimization from Quiz #3
+
+commit cdb36d960abfa374830b04efee7324b79a903665
+Author: Alex <alex@niznik.info>
+Date:   Wed Sep 7 17:18:43 2016 -0500
+
+    Created README
+
+commit 4f9d5a4203b10fda3046ef9c49be0dca7bc01110
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 17:16:16 2016 -0500
+
+    added -A
+
+commit 5cd9c9283bde5fcdc544301a2f7b4a99ae5562db
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 17:14:03 2016 -0500
+
+    added -A
+
+commit bf594213bf89064809390e826e91f702bb5ff642
+Merge: 1637505 abda10e
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 17:12:29 2016 -0500
+
+    added -A
+
+commit abda10ec20a5f139552b22caf78bb55699584ced
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 17:11:53 2016 -0500
+
+    deleted vscode files
+
+commit 2555bd61262f5cce107fb8f5c4d88c1d9ad0c85e
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 17:09:02 2016 -0500
+
+    updated .gitignore
+
+commit 163750584621abb97cc383b3f664c4873c403c7b
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 16:56:46 2016 -0500
+
+    updated files
+
+commit e4dd05668eee93a1e3bb1f1cb8731df31ebaa027
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 16:54:26 2016 -0500
+
+    added .gitignore
+
+commit efeda6e8f07333d9875b45a5b09601eab9f7c5c5
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 16:46:41 2016 -0500
+
+    cleaned the code and added more tests
+
+commit ea963527cc6eabf169195fce67cf6568fab7d67c
+Author: Alex Niznik <alex@niznik.info>
+Date:   Wed Sep 7 14:03:18 2016 -0500
+
+    cache now works on array
+
+commit e95f71e04b5df1821e0134456599a107a102e7ae
+Author: Alex Niznik <alex@niznik.info>
+Date:   Tue Sep 6 17:35:40 2016 -0500
+
+    implemented a cache based on std::map
+
+commit 439c0ca893556f4c5a698aded145bcf911cd4236
+Author: Alex Niznik <alex@niznik.info>
+Date:   Mon Sep 5 19:34:48 2016 -0500
+
+    rearanging files
+
+commit df35bcfb59f00ef7763ff65a728a7561373fc639
+Author: Alex Niznik <alex@niznik.info>
+Date:   Mon Sep 5 19:33:24 2016 -0500
+
+    added .gitignore
+
+commit a2cf1e2a996af82f9b182280e572d6a5358c25b0
+Author: Alex Niznik <alex@niznik.info>
+Date:   Mon Sep 5 19:27:40 2016 -0500
+
+    Collatz.c++ with optimalization now working
+
+commit ed1f0c4b3305b12fd3424b3999228f1f74247bbf
+Author: Alex Niznik <alex@niznik.info>
+Date:   Mon Sep 5 13:46:45 2016 -0500
+
+    Implemented cache
+
+commit ea6d2385c39841a8d847db5afe20eef5e07f2909
+Author: Alex Niznik <alex@niznik.info>
+Date:   Mon Sep 5 10:51:24 2016 -0500
+
+    added some tests and made the code working
+
+commit 2a03f2364869a4241227004020db26d716ccac24
+Author: Alex Niznik <alex@niznik.info>
+Date:   Sat Sep 3 13:01:22 2016 -0500
+
+    created UVaCollatz.cpp
+
+commit 360188be9325d8123e9830fa3328d76806d60e68
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 20:36:53 2016 -0500
+
+    testing travis
+
+commit 9fa31fc34bdd5135b447b7f9e5dd9e14e6d4be67
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 20:21:10 2016 -0500
+
+    testing travis
+
+commit 7e08dd730d38f326de7d817bde97cdb14b081c53
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 20:20:31 2016 -0500
+
+    testing travis
+
+commit 3f136e5e9c39f09a6283410e13e8c4e040f1056f
+Author: Alex Niznik <alex@niznik.info>
+Date:   Fri Sep 2 18:05:50 2016 -0500
+
+    code running
+
 commit 005eb837fe310f46ef4c17333fc4728eb41f6b10
 Author: Alex Niznik <alex@niznik.info>
 Date:   Fri Sep 2 17:57:38 2016 -0500
