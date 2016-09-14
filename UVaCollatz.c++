@@ -11,8 +11,6 @@
 #include <cassert>  // assert
 #include <iostream> // endl, istream, ostream
 
-#include "Collatz.h"
-
 using namespace std;
 const int N = 100000;
 // ------------
